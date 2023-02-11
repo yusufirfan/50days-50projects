@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap');
+
+body{
+    height: 100vh;
+    font-family: Lato, sans-serif;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    width: 90vw;
+}
+
+.panel{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 80vh;
+    border-radius: 2rem;
+    color: white;
+    cursor: pointer;
+    flex: 0.5;
+    margin: .6rem;
+    position: relative;
+    transition: flex .8s ease-in-out;
+}
+
+.panel h3{
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    font-size: 2em;
+    margin: 0;
+    opacity: 0;
+}
+
+.panel.active{
+    flex: 5;
+}
+
+.panel.active h3{
+    opacity: 1;
+    transition: opacity .8s ease-in-out;
+}
+
+.panel:nth-child(1){
+    background-image: url("https://images.unsplash.com/photo-1527960669566-f882ba85a4c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YXdlc29tZSUyMHBpY3xlbnwwfHwwfHw%3D&w=1000&q=80");
+}
+
+.panel:nth-child(2){
+    background-image: url("https://pbs.twimg.com/media/FfhkDtjWQAMYNrc.jpg:large");
+}
+
+.panel:nth-child(3){
+    background-image: url("https://pbs.twimg.com/media/FdKsxkuWYAAk73K.jpg:large");
+}
+
+.panel:nth-child(4){
+    background-image: url("https://www.val-gardena.com/fileadmin/_processed_/8/5/csm_2020-09-09-jb-pic_56f2aa6c3c.jpg");
+}
+
+.panel:nth-child(5){
+    background-image: url("https://www.val-gardena.com/fileadmin/_processed_/e/7/csm_pic-berg-groeden_0753f28ce9.jpg");
+}
+
+@media(max-width: 480px){
+    .container{
+        width: 100vw;
+    }
+    .panel:nth-of-type(4), .panel:nth-of-type(5){
+        display: none;
+    }
+}
