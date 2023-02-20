@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: "Lato", sans-serif;
+    overflow: hidden;
+    margin: 0;
+}
+
+.bg{
+    background: url('https://media.wired.com/photos/62feb60bcea7c0581e825cb0/2:1/w_2400,h_1200,c_limit/Fate-of-Game-Preservation-Games-GettyImages-1170073827.jpg') no-repeat center center/cover;
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    width: calc(100vw + 60px);
+    height: calc(100vh + 60px);
+    z-index: -1;
+    filter: blur(0px);
+}
+
+.loading-text{
+    color: white;
+    font-size: 50px;
+}
