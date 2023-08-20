@@ -5,3 +5,12 @@
   padding: 0;
   margin: 0;
 }
+
+body{
+  font-family: 'Muli' sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
