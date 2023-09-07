@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli:wght@400;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  background-color: #d1d1d1;
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.magic{
+  background-color: #f9ca24;
+  color: white;
+  border: 0;
+  border-radius: 3px;
+  font-size: 16px;
+  padding: 12px 20px;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  letter-spacing: 1px;
+  box-shadow: 0 3px rgba(249, 202, 36, .6);
+  z-index: 100;
+}
+
+.magic:focus{
+  outline: none;
+}
+
+.magic:active{
+  box-shadow: none;
+  transform: translateY(2px);
+}
+
+.boxes{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: 500px;
+  width: 500px;
+  position: relative;
+  transition: .4s ease;
+}
+
+.boxes.big{
+  height: 600px;
+  width: 600px;
+}
+
+.boxes.big .box {
+  transform: rotateZ(360deg);
+}
+
+.box{
+  background-image: url('https://media.tenor.com/Zhd96A3KxSAAAAAM/avatar-the.gif'); /*avatar last airbender picture*/
+  background-repeat: no-repeat;
+  background-size: 500px 500px;
+  position: relative;
+  height: 125px;
+  width: 125px;
+  transition: 0.4s ease;
+}
+
+.box::after {
+  content: ' ';
+  background-color: #70a3e6;
+  position: absolute;
+  top: 8px;
+  right: -15px;
+  height: 100%;
+  width: 15px;
+  transform: skewY(45deg);
+}
+
+.box::before {
+  content: ' ';
+  background-color: #2492f9;
+  position: absolute;
+  bottom: -15px;
+  left: 8px;
+  height: 15px;
+  width: 100%;
+  transform: skewX(45deg);
+}
